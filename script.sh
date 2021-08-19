@@ -59,7 +59,7 @@ sed -i -e "s/$appNameTarget/$projectName/g
 
 # package.json
 sed -i -e "s/$appAuthorTarget/$projectAuthor/g
-           s/$appShortcutTarget/$projectShortcut/g
+           s/app-shortcut/$projectShortcut/g
            s/$appRepositoryTarget/$projectRepository/g
            s/$appDescriptionTarget/$projectDescription/g" package.json
 
@@ -76,3 +76,7 @@ sed -i -e "s/$appShortcutTarget/$projectShortcut/g" ./src/app/app.component.jsx
 
 ## remove all created files
 find . -name "*-e" -type f -delete
+
+
+## install all packages
+yarn install
